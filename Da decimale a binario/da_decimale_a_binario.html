@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversione da decimale a binario</title>
+    </head>
+    <body>
+        <label>Inserisci il numero</label>
+        <input type="text" id="s1" value=""><br><br>
+
+        <input type="submit" onclick="reverseString()">
+
+        <h4 id="p1" style="display:none">Numero in binario:</h4>
+        <p id="demo"></p>
+
+    </body>
+    <script>
+        function reverseString(){
+            document.getElementById('p1').style.display='block'
+
+            var string1 = document.getElementById('s1').value;
+            var decimale = parseInt(string1);
+            var binario = decimale.toString(2);
+            document.getElementById("demo").innerHTML = binario;
+        }
+    </script>
+</html>
