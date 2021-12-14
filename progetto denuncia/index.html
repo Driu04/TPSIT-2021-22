@@ -12,21 +12,37 @@
             h1{
                 font-family: Verdana;
                 color: rgb(15, 129, 129);
+                text-align: center;
             }
             h2{
                 margin-top: 40px;
                 margin-bottom: 30px;
                 font-family: Verdana;
                 color: rgb(15, 129, 129);
+                text-align: center;
             }
             .timer{
-                display: flex;
+                text-align: center;
                 color: darkblue;
                 font-weight: bold;
+                font-size: 45px;
+                margin-top: 2px;
+            }
+            .text{
+                text-align: center;
+                color: darkblue;
+                font-weight: bold;
+                margin-top: 45px;
             }
             img{
                 margin-top: 30px;
                 margin-bottom: 30px;
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
             }
      
             @media only screen and (max-device-width : 500px) {
@@ -45,10 +61,18 @@
                     margin-bottom: 10px;
                 }
                 .timer{
-                    display: inline;
+                    text-align: center;
+                    color: darkblue;
+                    font-weight: bold;
+                    font-size: 25px;
+                    margin-top: 2px;
                 }
                 .text{
-                    display: none;
+                    text-align: center;
+                    color: darkblue;
+                    font-weight: bold;
+                    margin-top: 45px;
+                    font-size: 15px;
                 }
             }
 
@@ -62,36 +86,48 @@
                 img{
                     margin-bottom: 20px;
                 }
+                .timer{
+                    text-align: center;
+                    color: darkblue;
+                    font-weight: bold;
+                    font-size: 25px;
+                    margin-top: 2px;
+                }
             }
         </style>
     </head>
     <body>
 
         <h1>Consumo di acqua in Italia</h1>
-        
 
-        <img src="https://www.acquamaya.com/wp-content/uploads/2021/04/acqua_spreco.jpg" style="width:80%">
+        <p class="text">Attuale consumo di acqua (in litri) in tutta Italia:</p>
+        <p class="timer" id="demo">0</p>
 
-        <p>L'acqua è una risorsa essenziale per la vita sulla Terra. La maggior parte delle persone ignora il fatto che questo bene prezioso non solo non è illimitato, ma sta anche iniziando a scarseggiare, in corrispondenza ad un costante aumento della popolazione. Il consumo eccessivo d'acqua è quindi un problema serio che va affrontato e che col tempo può portare a conseguenze disastrose per l'uomo.</p>
+
+        <p>L'aqaua è una risorsa essenziale per la vita sulla Terra. La maggior parte delle persone ignora il fatto che questo bene prezioso non solo non è illimitato, ma sta anche iniziando a scarseggiare, in corrispondenza ad un costante aumento della popolazione. Il consumo eccessivo d'acqua è quindi un problema serio che va affrontato e che col tempo può portare a conseguenze disastrose per l'uomo.</p>
+
+        <img class="center" src="https://www.acquamaya.com/wp-content/uploads/2021/04/acqua_spreco.jpg" style="width:90%">
 
         <h2>Un problema globale</h2>
 
         <p>Inutile dire che il consumo di acqua è un problema che riguarda il mondo intero. Nonostante questo la situazione dell'Italia non è delle migliori: è la prima in Europa e una delle prime al mondo per il consumo di acqua potabile, con circa 220 litri al giorno consumati per ogni abitante (la maggior parte dell’acqua potabile viene utilizzata in doccia e bagno, nel lavaggio delle stoviglie, in lavatrici, per le pulizie domestiche e per innaffiare piante e giardini). Soltanto in Italia vengono quindi consumati più di 13 miliardi di litri al giorno, un consumo dovuto anche alla pessima manutenzione delle reti idriche, che provoca anomalie rappresentanti quasi il 50% degli sprechi giornalieri.</p>
 
-        <img src="https://www.altroconsumo.it/-/media/altroconsumo/images/home/alimentazione/acqua/news-dossier/acqua_bottiglia_1600x900.jpg?rev=d76cb759-7c02-4010-8161-ca260b271a3c&hash=9F60BEBFAB8B1E6B3A54BDDDD0132FDD" style="width:80%">
+        <img class="center" src="https://www.altroconsumo.it/-/media/altroconsumo/images/home/alimentazione/acqua/news-dossier/acqua_bottiglia_1600x900.jpg?rev=d76cb759-7c02-4010-8161-ca260b271a3c&hash=9F60BEBFAB8B1E6B3A54BDDDD0132FDD" style="width:90%">
 
         <p>Non tutti i paesi possono permettersi tale spreco. Infatti in circa 30 paesi del mondo più del 50% della popolazione non ha accesso ad acqua potabile, ciò significa che più di un miliardo di persone nel mondo sono obbligate a fare uso di acqua inquinata. Si passa quindi dai paesi industrializzati dove ogni abitante può consumare centinaia di litri d'acqua al giorno a paesi dove non è sufficiente nemmeno l'acqua indispensabile per la sopravvivenza.</p>
 
         <h2>Come affrontare il consumo d'acqua</h2>
 
         <p>Esistono diversi modi per diminuire drasticamente gli sprechi d'acqua nella nostra vita di tutti i giorni. L'importante è usare le giuste quantità che ci servono, senza esagerare, attraverso gesti come l'utilizzo dei riduttori di flusso per i rubinetti, che abbassano del 50% i nostri consumi; preferire la doccia alla vasca, stando in doccia un tempo ragionevole; chiudere il rubinetto mentre ci si lava i denti o ci si insapona; controllare che non ci siano perdite o rubinetti gocciolanti; utilizzare una bacinella per farsi la barba; utilizzare una bacinella per lavare la verdura e usare l’acqua corrente solo per l’ultimo risciacquo; usare lavatrice e lavastoviglie solo a pieno carico.</p>
-
-        <div class="timer">
-            <p>Consumo di litri d'acqua attuale in Italia: </p>
-            <p style="color: white;" class="text">eee</p>
-            <p id="demo">0</p>
-        </div>
         
+        <h2 style="text-align:left;margin-left:25px;">Sitografia:</h2>
+
+        <ul>
+            <li><a href="https://quifinanza.it/green/consumo-medio-acqua-quanto-ammonta/508463/#:~:text=Gli%20italiani%20sono%20la%20popolazione,dovute%20al%20territorio%20di%20provenienza.">Quifinanza</a></li><br>
+            <li><a href="https://acquadelrubinetto.gruppocap.it/ambiente/consumo-acqua-costo-da-sostenere/">Acqua del rubinetto</a></li><br>
+            <li><a href="https://www.santanna.it/il-bicchiere-mezzo-pieno/il-consumo-di-acqua-nel-mondo-e-in-italia/">Sant'Anna</a></li><br>
+        </ul>
+
         <script>
             var myVar = setInterval(myTimer, 1000);
             var c = 152777;
