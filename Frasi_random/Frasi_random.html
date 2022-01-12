@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input stringhe</title>
+        <style>
+            .gray{
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gray">
+            <label>Soggetto</label><br>
+            <input type="text" id="s1" value=""><br><br>
+            <label>Verbo</label><br>
+            <input type="text" id="s2" value=""><br><br>
+            <label>Complemento Oggetto</label><br>
+            <input type="text" id="s3" value=""><br><br>
+
+        
+            <input type="submit" onclick="creaFrase()">
+
+            <h4 id="p2">Soggetto:</h4>
+            <p id="string1"></p>
+            <h4 id="p2">Verbo:</h4>
+            <p id="string2"></p>
+            <h4 id="p2">Complemento Oggetto:</h4>
+            <p id="string3"></p>
+
+            <h4 id="p1">Frase Finale:</h4>
+            <p id="demo"></p>
+        </div>
+    </body>
+    <script>
+        function creaFrase(){
+
+            // assegna alle variabili string i valori inseriti dall'utente
+            var soggetto = document.getElementById('s1').value;
+            var verbo  = document.getElementById('s2').value;
+            var complemento = document.getElementById('s3').value;
+
+            // concatenazione delle stringhe
+            document.getElementById('demo').innerHTML = soggetto + " " + verbo + " " + complemento;
+
+            //inversione delle stringhe
+            document.getElementById('string1').innerHTML = soggetto;
+            document.getElementById('string2').innerHTML = verbo;
+            document.getElementById('string3').innerHTML = complemento;
+        }
+    </script>
+</html>
