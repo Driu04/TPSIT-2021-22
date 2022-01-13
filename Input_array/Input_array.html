@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title>Input array</title>
+    </head>
+    <body>
+
+        <label>Inserisci la frase:</label>
+        <input type="text" id="box" value=""><br><br>
+        <input type="submit" onclick="inputToArray()">
+
+
+        <p id="out"></p>
+
+        <script>
+
+            const arrayString = [];
+            function inputToArray() {
+                var string = document.getElementById('box').value;
+                arrayString.push(string);
+                console.log(arrayString);
+                document.getElementById('out').innerHTML=arrayString;
+            }
+
+        </script>
+    </body>
+</html>
