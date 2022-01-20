@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <head>
+        <title>Input array</title>
+        <link rel="stylesheet" href="Form_array_style.css">
+    </head>
+    <body>
+
+        <div class="formArray">
+
+            <label>Soggetto:</label><br><br>
+            <input type="text" id="soggetto" value=""><br><br>
+            <label>Verbo:</label><br><br>
+            <input type="text" id="verbo" value=""><br><br>
+            <label>Complemento oggetto:</label><br><br>
+            <input type="text" id="complemento" value=""><br><br>
+            <label>Aggettivo:</label><br><br>
+            <input type="text" id="aggettivo" value=""><br><br>
+
+            <button onclick="creaFrasi()">Crea frase</button>
+
+            <h4 id="p2" class="hidden">Soggetti:</h4>
+            <p id="reverseS1"></p>
+            <h4 id="p3" class="hidden">Verbi:</h4>
+            <p id="reverseS2"></p>
+            <h4 id="p4" class="hidden">Complementi:</h4>
+            <p id="reverseS3"></p>
+            <h4 id="p5" class="hidden">Aggettivi:</h4>
+            <p id="reverseS4"></p>
+
+            <h4 id="p6" class="hidden">Frasi casuali:</h4>
+            <p id="frasi"></p>
+
+        </div>
+
+        <script>
+            
+            function creaFrasi(){
+                document.getElementById('p2').style.display='block'
+                document.getElementById('p3').style.display='block'
+                document.getElementById('p4').style.display='block'
+                document.getElementById('p5').style.display='block'
+                document.getElementById('p6').style.display='block'
+
+                var soggetto = document.getElementById('soggetto').value;
+                var verbo = document.getElementById('verbo').value;
+                var complemento = document.getElementById('complemento').value;
+                var aggettivo = document.getElementById('aggettivo').value;
+
+                let soggetti = soggetto.split(' ');
+                let verbi = verbo.split(' ');
+                let complementi = complemento.split(' ');
+                let aggettivi = aggettivo.split(' ');
+
+                document.getElementById('reverseS1').innerHTML = soggetto;
+                document.getElementById('reverseS2').innerHTML = verbo;
+                document.getElementById('reverseS3').innerHTML = complemento;
+                document.getElementById('reverseS4').innerHTML = aggettivo;
+
+                max = soggetti.length;
+                if (verbi.length > max)
+                    max = verbi.length
+                if (complementi.length > max)
+                    max = complementi.length
+                if (aggettivi.length > max)
+                    max = aggettivi.length
+
+                frase = ""
+                for (i = 0; i < max; i ++) {
+                    sogg = Math.floor(Math.random() * soggetti.length);
+                    verb = Math.floor(Math.random() * verbi.length);
+                    comp = Math.floor(Math.random() * complementi.length);
+                    agg = Math.floor(Math.random() * aggettivi.length);
+                    frase += soggetti[sogg] + " " + verbi[verb] + " " + complementi[comp] + " " + aggettivi[agg] + " - ";
+                }
+                document.getElementById('frasi').innerHTML = frase;
+            }
+
+        </script>
+    </body>
+</html>
