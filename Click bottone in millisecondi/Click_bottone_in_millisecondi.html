@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titolo</title>
+    </head>
+    <body>
+        <h2>codice test per i giochi basasti sui tempi</h2>
+
+        <p id="demo">Questa pagina conta quanto tempo ci metti  a premere il bottone</p>
+        <p id="out">........0.0</p>
+        <p id="times"></p>
+
+        <button type="button" onclick='count()'>Invia</button>
+
+        <script>
+            let i = 0;
+            let start = Date.now();
+            array_milliseconds = []
+            times_in_milliseconds = ""
+
+            function count() {
+                document.getElementById("out").innerHTML="Done in " + (Date.now() - start) + " ms";
+                array_milliseconds[i] = Date.now() - start;
+                i ++;
+                for (j = i - 1; j < array_milliseconds.length; j ++) {
+                    times_in_milliseconds += array_milliseconds[j] + ", ";
+                }
+                document.getElementById("times").innerHTML = times_in_milliseconds;
+            }
+        </script>
+    </body>
+</html>
