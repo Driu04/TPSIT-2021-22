@@ -1,0 +1,38 @@
+<html>
+   <head>
+        <title>Analisi numerica</title>
+        <link rel="stylesheet" href="analisi_numerica.css">
+   </head>
+
+   <body>
+       <p id="demo"></p>
+
+       <script>
+           numbers = 1000;
+           num = 1;
+            for(i=0; i < numbers; i ++) {
+                for(j=0; j < 10; j ++) {
+                    var div = document.createElement("div");
+                    div.className = 'dragme'
+                    div.innerHTML = parseInt(num);
+                    div.style.width = "50px";
+                    div.style.height = "50px";
+
+                    if (num % 10 == 0)
+                        div.style.background = "red";
+                    else
+                        div.style.background = "green";
+
+                    if (num % 2 == 0)
+                        div.style.fontFamily = "Courier new";
+                    else
+                        div.style.fontWeight = "bold";
+
+                    div.style.color = "white";
+                    document.body.appendChild(div);
+                    num ++;
+                }
+            }
+        </script>
+   </body>
+</html>
