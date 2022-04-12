@@ -1,7 +1,7 @@
 clicked = false;
 punteggio = 0;
 
-function inizia() {
+function inizia() {     // fa partire il gioco
 
    if (!clicked) {
       clicked = true;
@@ -11,24 +11,24 @@ function inizia() {
       document.getElementById("game").style.borderColor = "black";
       document.getElementById("game").style.borderStyle = "solid";
       document.getElementById("game").style.borderWidth = "10px";
-      document.getElementById("game").style.borderRadius = "20%";
+      document.getElementById("game").style.borderRadius = "20%";    // curvatura del quadrato
 
-      document.getElementById("guess").innerHTML="Punteggio: "+punteggio;
+      document.getElementById("guess").innerHTML="Punteggio: "+punteggio;  // aggiorna il punteggio
    }
 
 }  
 
-sequenza = 0;
-length_sequenza = 5;
-guess = false;
-sequence = ""
-user_guess = "";
+sequenza = 0;       // la sequenza che man mano viene generata
+length_sequenza = 5;    // la lunghezza iniziale
+guess = false;      // quando l'utente deve indovinare
+sequence = ""       // contiene la sequenza da indovinare
+user_guess = "";    // la sequenza dell'utente
 
 i = 0;
 
-function Colora() {
+function Colora() {     // illumina il quadrato e aggiorna la variabile 'sequence'
    if (sequenza == length_sequenza) {
-      clearInterval(a);
+      clearInterval(a);    // interrompe il setInterval
       sequenza = 0;
       document.getElementById("game").style.borderColor = "black";
       guess = true;
@@ -64,7 +64,7 @@ function Colora() {
    }
 }
 
-function check() {
+function check() {      // controlla se l'utente ha finito di inserie la sequenza
    if (user_guess.length == sequence.length) {
       if (user_guess == sequence) {
          document.getElementById("guess").innerHTML="Hai vinto!";
