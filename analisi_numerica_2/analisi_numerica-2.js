@@ -24,7 +24,7 @@ for(let i=1; i<range; i++) {
     divisibile = 0;
 }
 
-document.write("Numero: " + parseInt(maxNum) + " con " + parseInt(max) + " divisori ");
+document.write("Numero: " + parseInt(maxNum) + " con " + parseInt(max - 1) + " divisori ");
 
 
 // Domanda 2
