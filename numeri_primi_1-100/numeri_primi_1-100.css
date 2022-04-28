@@ -1,0 +1,18 @@
+#table {
+    background-color:#535853;
+    border:1px solid black;
+    color: #fff;
+    font-family:verdana,arial;
+    font-size:14px;
+    font-weight:bold;
+    height:100px;
+    margin:10px;
+    text-align:center;
+    width:230px;
+}
+
+.dragMe {
+    float:left;
+    margin:10px;
+    text-align: center;
+}
