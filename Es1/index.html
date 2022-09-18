@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="es1.css">
+        <title>Es 1</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <button class="btn" type="submit">P</button>
+            <button class="btn" type="submit" onclick="counter('addVer')">/\</button>
+            <button class="btn" type="submit">P</button><br>
+
+            <button class="btn" type="submit" onclick="counter('addOrr')"><</button>
+            <button class="btn" type="submit">Pp</button>
+            <button class="btn" type="submit" onclick="counter('removeOrr')">></button><br>
+
+            <button class="btn" type="submit">P</button>
+            <button class="btn" type="submit" onclick="counter('removeVer')">\/</button>
+            <button class="btn" type="submit">P</button>
+        </div>
+
+        <div id="vertical">0</div>
+        <div id="orizzontal">0</div>
+    </body>
+
+    <script>
+
+        function counter(c) {
+            var v = parseInt(document.getElementById('vertical').innerHTML);
+            var o = parseInt(document.getElementById('orizzontal').innerHTML);
+
+            switch (c) {
+                case "addVer":
+                    document.getElementById('vertical').innerHTML = v + 1;
+                    break;
+
+                case "addOrr":
+                    document.getElementById('orizzontal').innerHTML = o + 1;
+                    break;
+
+                case "removeVer":
+                    document.getElementById('vertical').innerHTML = v - 1;
+                    break;
+
+                case "removeOrr":
+                    document.getElementById('orizzontal').innerHTML = o - 1;
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+
+    </script>
+</html>

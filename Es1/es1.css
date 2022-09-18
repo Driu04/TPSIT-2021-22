@@ -1,0 +1,26 @@
+html {
+    background-color: hotpink;
+}
+
+.container {
+    background-color: sienna;
+    margin: auto;
+}
+
+.btn {
+    background-color: purple;
+    color: aqua;
+    font-family: papyrus;
+    display: inline;
+    padding: 30px;
+    margin: 20px;
+    font-size: 60px;
+}
+
+#vertical, #orizzontal {
+    background-color: olive;
+    font-family: 'Brush Script MT', cursive;
+    margin: 30px;
+    font-size: 50px;
+    text-align: center;
+}
